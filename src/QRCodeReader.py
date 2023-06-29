@@ -27,7 +27,7 @@ def detect_qr(image):
     # Show original image with box
     cv2.imshow('Output', image)
     cv2.waitKey(0)
-    # cv2.destroyAllWindows()
+    #cv2.destroyAllWindows()
 
 
 image = cv2.imread('../images/wifi-sign.jpg')

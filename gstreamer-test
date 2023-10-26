@@ -1,0 +1,5 @@
+send:
+gst-launch-1.0 videotestsrc ! x264enc tune=zerolatency threads=4 ! rtph264pay ! udpsink host=127.0.0.1 port=5000
+
+rec:
+gst-launch-1.0 udpsrc address=127.0.0.1 port=5000 ! application/x-rtp, encoding-name=H264 ! rtph264depay ! decodebin ! autovideosink

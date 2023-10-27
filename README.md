@@ -34,5 +34,5 @@ Add `/lib64/python<ver>/site-packages/cv2`
 
 ## :exclamation: opencv-python doesn't work on wayland!
 
-[**You need to use X11**](https://githu.com/opencv/opencv-python/issues/729)  
+[**You need to use X11**](https://github.com/opencv/opencv-python/issues/729)  
 Or you can run it in a container :D

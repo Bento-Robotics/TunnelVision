@@ -16,7 +16,8 @@ class BarcodeReader(Node):
 
     def __init__(self):
         super().__init__('barcode_reader')
-        self.subscription = self.create_subscription(String, '/barcode', self.barcode_callback, 10)
+        self.subscription = self.create_subscription(String, '/CV/barcode', self.barcode_callback, 10)
+        self.subscription = self.create_subscription(String, '/Driver/barcode', self.barcode_callback, 10)
 
     def barcode_callback(self, msg):
         if msg.data not in self.barcodeText:

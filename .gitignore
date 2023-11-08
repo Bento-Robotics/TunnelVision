@@ -1,0 +1,7 @@
+.git/
+cmake-build-debug/
+scripts/__pycache__/
+scripts/*.swp
+venv/
+.idea/
+.vscode/

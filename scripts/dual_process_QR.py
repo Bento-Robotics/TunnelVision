@@ -11,7 +11,7 @@ from rclpy.node import Node
 from std_msgs.msg import String
 
 class BarcodeReader(Node):
-    barcodeText = ""
+    barcodeText = []
     barcodeNo = 0
 
     def __init__(self):
@@ -19,9 +19,9 @@ class BarcodeReader(Node):
         self.subscription = self.create_subscription(String, '/barcode', self.barcode_callback, 10)
 
     def barcode_callback(self, msg):
-        if msg.data != self.barcodeText:
+        if msg.data not in self.barcodeText:
             self.get_logger().info('#%s ' % self.barcodeNo + msg.data)
-            self.barcodeText = msg.data
+            self.barcodeText.append(msg.data)
             self.barcodeNo += 1
 
 def main(args=None):

@@ -12,7 +12,8 @@ find_package(ament_cmake REQUIRED)
 # find_package(<dependency> REQUIRED)
 
 install(PROGRAMS
-        scripts/Process_QR.py
+        scripts/process_QR.py
+	scripts/dual_process_QR.py
         DESTINATION lib/${PROJECT_NAME})
 
 install(DIRECTORY

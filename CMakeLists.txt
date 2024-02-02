@@ -18,7 +18,7 @@ install(PROGRAMS
 
 install(DIRECTORY
 	launch
-	parameters
+	#parameters
 	DESTINATION share/${PROJECT_NAME})
 
 ament_package()

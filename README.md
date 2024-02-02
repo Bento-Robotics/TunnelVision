@@ -1,7 +1,9 @@
 # CV for bento robots and drivers
 
-## Box
-- start_cameras
+```
+ros2 launch TunnelVision barcode_reader.launch.py
+```
 
-## Driver
-- barcode_reader
+```
+ros2 launch TunnelVision dual_barcode_reader.launch.py
+```

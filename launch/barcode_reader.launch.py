@@ -12,7 +12,7 @@ def generate_launch_description():
        ),
         Node(
             package='TunnelVision',
-            executable='process_QR.py',
+            executable='process_QR',
             name='qr_antiduplicate',
             output='screen',
             emulate_tty=True,

@@ -26,13 +26,17 @@ class BarcodeReader(Node):
             self.barcodeNo += 1
 
 def main(args=None):
-    rclpy.init(args=args)
-    barcode_reader = BarcodeReader()
-    print('\033[0;32m###started####\033[0m')
-    rclpy.spin(barcode_reader)
+    try:
+        rclpy.init(args=args)
+        barcode_reader = BarcodeReader()
+        print('\033[0;32m###started####\033[0m')
+        rclpy.spin(barcode_reader)
 
-    barcode_reader.destroy_node()
-    rclpy.shutdown
+    # shut down cleanly
+    except KeyboardInterrupt:
+        pass
+    except ExternalShutdownException:
+        sys.exit(1)
 
 if __name__== '__main__':
     main()
